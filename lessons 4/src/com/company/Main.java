@@ -19,10 +19,12 @@ public class Main {
     System.out.println(t);
 
     //5
-    int [] c = {58,47,88,6,77,1,987,123};
-    System.out.println("-----------------");
-    for ()
+    a = bubbleSort(a);
+    for (int i = 0; i < a.length;i++){
+        System.out.println(a[i]);
+
     }
+        }
 
     //1
     //объявление функции
