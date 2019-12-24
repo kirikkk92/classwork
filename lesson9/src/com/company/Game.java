@@ -17,7 +17,7 @@ public class Game {
         Random rand = new Random();
         this.number = rand.nextInt(100) + 1;
     }
-        public void start () {
+    public void start () {
             Scanner sc = new Scanner(System.in);
             int user;
             while (true) {
