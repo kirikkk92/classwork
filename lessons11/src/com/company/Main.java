@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.annotation.processing.SupportedSourceVersion;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -69,6 +71,9 @@ public class Main {
             System.out.println(chunks[i]);
         }
         System.out.println(str.substring(1,5));//выделяет подстроку в строке
+        //приведение регистров
+        System.out.println(str.toLowerCase());
+        System.out.println(str.toUpperCase());
 
     }
 }
