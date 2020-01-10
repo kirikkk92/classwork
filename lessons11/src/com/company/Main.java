@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.annotation.processing.SupportedSourceVersion;
+import java.util.Date;
 
 public class Main {
 
@@ -74,6 +75,40 @@ public class Main {
         //приведение регистров
         System.out.println(str.toLowerCase());
         System.out.println(str.toUpperCase());
+
+        //ФОРМАТИРОВАНИЕ СТРОК 10.01.2020
+        /*Флаги форматирования:
+        %s - строка
+        %d - целое число(int,long и тд)
+        %f - вещественное число
+        %b - тип boolean
+        %с - символы типа char
+        %t - вывод дат
+        %% - вывод символа процента
+        \n - переход на новую строку
+        \t - символ табуляции
+        \b - удаляет предыдущий символ
+        \\ - вывод слеша\
+        */
+        int age = 27;
+        Date d = new Date();
+        String sFormat = String.format(
+                "\tМеня зовут\b %10s.\nМне %d лет. Мой рост %.2f см. Я хочу знать Java  на 100%%!\\. Сегодня %tc",
+        "Kirill",age,176.8, d);
+        System.out.println(sFormat);
+
+        String sFormat2 = String.format(
+                "Мое счастливое число - %2$d. Мой любимый цвет - %1$s ", "red", 40
+        );
+        System.out.println(sFormat2);
+        //преобразование нестроковых объектов в строки
+        int a = 150;
+        String sa =  String.valueOf(a);
+        System.out.println(sa);
+
+
+
+
 
     }
 }
