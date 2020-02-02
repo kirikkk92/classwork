@@ -43,7 +43,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
         //Игра в угадай число
-        Game game = new Game();
+       Game game = new Game();
         game.start();
     }
     public static void test () throws MyException {
