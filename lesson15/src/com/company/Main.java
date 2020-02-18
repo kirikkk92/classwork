@@ -120,7 +120,6 @@ public class Main {
         ct.interrupt();//прерывает выполнение потока
         Thread.yield();//завершает квант работы текущего потока и переключается на следующий поток
         ct.setPriority(Thread.MAX_PRIORITY);//устанавливает приоритет потока
-        Thread.
 
 
 
