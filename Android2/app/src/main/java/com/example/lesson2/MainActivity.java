@@ -2,6 +2,7 @@ package com.example.lesson2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -33,7 +34,13 @@ public class MainActivity extends AppCompatActivity {
                     errorMsg.setVisibility(View.VISIBLE);
                     return;
                 }
+                showMenuActivity();
             }
         });
+
+    }
+    public void showMenuActivity(){
+        Intent i = new Intent(this,MenuActivity.class);
+        startActivity(i);
     }
 }
