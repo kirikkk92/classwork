@@ -20,9 +20,15 @@
 
     <TextView
         android:id="@+id/hello"
+        style="@android:style/Widget.TextView.PopupMenu"
         android:layout_width="52dp"
         android:layout_height="38dp"
+        android:autoText="true"
+        android:background="#00EB1B1B"
+        android:drawableEnd="@mipmap/ic_launcher"
+        android:drawableBottom="@android:drawable/btn_dialog"
         android:text="Hello World"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
