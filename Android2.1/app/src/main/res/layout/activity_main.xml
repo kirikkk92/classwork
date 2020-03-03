@@ -4,12 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/qq"
     tools:context=".MainActivity">
 
 
     <TextView
-        android:id="@+id/signupBtn"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -18,6 +17,7 @@
         android:background="#00FFFF00"
         android:text="Регистрация"
         android:textColor="#000001"
+        android:textColorHighlight="#000C0C0C"
         android:textColorHint="#000001"
         android:textSize="18sp"
         android:textStyle="bold|italic"
@@ -43,32 +43,31 @@
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#3318FFFF"
+
         android:ems="10"
         android:hint="Введите логин"
         android:inputType="textEmailAddress"
-        android:textColor="#000001"
-        android:textColorHighlight="@color/colorPrimaryDark"
-        android:textColorHint="#CC0DF00D"
+
         android:textColorLink="#00D51010"
-        android:textStyle="italic"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.271" />
 
+
     <EditText
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#3318FFFF"
+
         android:ems="10"
         android:hint="Введите пароль"
         android:inputType="textPassword"
         android:textAllCaps="false"
-        android:textColor="#0E0C0E"
-        android:textColorHint="#CC0DF00D"
+
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,33 +79,30 @@
         android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="136dp"
         android:layout_marginBottom="169dp"
-        android:autoText="false"
-        android:background="#3318FFFF"
+
         android:freezesText="false"
         android:text="Войти"
-        android:textColor="#000001"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/errorMsg"
-        android:layout_width="135dp"
-        android:layout_height="104dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_marginBottom="103dp"
-        android:textColor="#E90606"
-        android:textColorHint="#E41414"
+        android:text="Ошибка"
+        android:textColor="#00FA0707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginBtn"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
