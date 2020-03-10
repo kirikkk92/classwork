@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8ADD0C0C"
+    tools:context=".ConfirmActivity">
+
+    <EditText
+        android:id="@+id/code"
+        android:layout_width="212dp"
+        android:layout_height="43dp"
+        android:background="#9F4DCE26"
+        android:ems="10"
+        android:hint="Введите код"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:textColor="#020202"
+        android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24" />
+
+    <Button
+        android:id="@+id/confirmBtm"
+        android:layout_width="212dp"
+        android:layout_height="43dp"
+        android:background="#7A21DD1B"
+        android:hint="Подтвердить"
+        android:textColorHint="#0C0C0C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/code"
+        app:layout_constraintVertical_bias="0.219" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

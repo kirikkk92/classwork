@@ -1,5 +1,7 @@
 package com.example.lesson2.API;
 
+import com.example.lesson2.model.ConfirmRequest;
+import com.example.lesson2.model.ConfirmResponse;
 import com.example.lesson2.model.LoginRequest;
 import com.example.lesson2.model.LoginResponse;
 import com.example.lesson2.model.RegistrationRequest;
@@ -15,4 +17,7 @@ public interface MyFamily {
 
     @POST("/registration")//создали вызов по адресу
     Call<RegistrationResponse> registration(@Body RegistrationRequest r);
+
+    @POST("/confirm")//создали вызов по адресу
+    Call<ConfirmResponse> confirm(@Body ConfirmRequest r);
 }
