@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(confirmPassword.getText().toString().equals("")){
                     error += "Подтвердите пароль\n";
                 }
-                if(!password.getText().toString().equals("") && confirmPassword.getText().toString().equals("")){
+                if(!password.getText().toString().equals("") && !confirmPassword.getText().toString().equals("")){
 
                     if (!password.getText().toString().equals(
                             confirmPassword.getText().toString())){
