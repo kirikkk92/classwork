@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.lesson2.model.RegistrationRequest;
+
 public class RegisterActivity extends AppCompatActivity {
 
     @Override
@@ -46,7 +48,9 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 if(!error.equals("")){//если произошла какая то ошибка, то выводим сообщение об ошибке
                     showError(error);
+                    return;
                 }
+                registerUser(name.getText().toString(),email.getText().toString(),password.getText().toString());
             }
         });
     }
@@ -62,5 +66,8 @@ public class RegisterActivity extends AppCompatActivity {
         alert.setIcon(R.drawable.ic_launcher_background);//вывод иконки
         alert.create();//создает объект alert dialog
         alert.show();
+    }
+    public void registerUser(String name,String email,String password){
+
     }
 }

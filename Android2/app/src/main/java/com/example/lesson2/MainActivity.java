@@ -3,7 +3,9 @@ package com.example.lesson2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -15,11 +17,15 @@ import com.example.lesson2.API.APIService;
 import com.example.lesson2.model.LoginRequest;
 import com.example.lesson2.model.LoginResponse;
 
+import java.util.prefs.Preferences;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView errorMsg;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText login = findViewById(R.id.login);
         final EditText password = findViewById(R.id.password);
         Button loginBtn = findViewById(R.id.loginBtn);
-        final TextView errorMsg = findViewById(R.id.errorMsg);
+        errorMsg = findViewById(R.id.errorMsg);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -96,16 +102,25 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                         LoginResponse resp = response.body();
                         if (!resp.result) {
-                            //TODO: обработка ошибки
+                            errorMsg.setVisibility(View.VISIBLE);
+                            errorMsg.setText(resp.error);
                         }else {
-                            //TODO: сохранить токен в памяти устройства
+                            //сохранить токен в памяти устройства
+                            //сохраняем токин в кэш приложения
+                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = preferences.edit();
+                            editor.putString("API_TOKEN",resp.token);
+                            editor.apply();
+                            //получение объекта из кэша
+                            //preferences.getString("API_TOKEN","default(значение по умолчанию)")
                             showMenuActivity();
                         }
                     }
 
                     @Override
                     public void onFailure(Call<LoginResponse> call, Throwable t) {
-                        //TODO: обработка ошибки
+                        errorMsg.setVisibility(View.VISIBLE);
+                        errorMsg.setText(t.getMessage());
                     }
                 });
 
