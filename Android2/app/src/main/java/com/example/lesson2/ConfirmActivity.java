@@ -15,10 +15,12 @@ import com.example.lesson2.model.ConfirmRequest;
 import com.example.lesson2.model.ConfirmResponse;
 import com.example.lesson2.model.RegistrationRequest;
 import com.example.lesson2.model.RegistrationResponse;
+import com.google.gson.Gson;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.GET;
 
 public class ConfirmActivity extends AppCompatActivity {
 
@@ -63,7 +65,15 @@ public class ConfirmActivity extends AppCompatActivity {
                 .enqueue(new Callback<ConfirmResponse>() {
                     @Override
                     public void onResponse(Call<ConfirmResponse> call, Response<ConfirmResponse> response) {
-                        ConfirmResponse resp = response.body();
+                        ConfirmResponse resp = null;
+                        if (!response.isSuccessful()){
+                            Gson g = new Gson();
+                            resp = g.fromJson(response.errorBody().charStream(),ConfirmResponse.class);
+                        }else {
+                            resp = response.body();
+                        }
+
+
                         if (!resp.result) {
                             showError(resp.error);
                         }else {

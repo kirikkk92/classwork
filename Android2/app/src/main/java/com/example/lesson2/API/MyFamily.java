@@ -15,9 +15,9 @@ public interface MyFamily {
     @POST("/login")
     Call<LoginResponse> login(@Body LoginRequest r);
 
-    @POST("/registration")//создали вызов по адресу
+    @POST("/register")//создали вызов по адресу
     Call<RegistrationResponse> registration(@Body RegistrationRequest r);
 
-    @POST("/confirm")//создали вызов по адресу
+    @POST("/submit")//создали вызов по адресу
     Call<ConfirmResponse> confirm(@Body ConfirmRequest r);
 }

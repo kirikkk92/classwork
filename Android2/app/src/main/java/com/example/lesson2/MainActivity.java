@@ -13,9 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.lesson2.API.APIBuilder;
 import com.example.lesson2.API.APIService;
 import com.example.lesson2.model.LoginRequest;
 import com.example.lesson2.model.LoginResponse;
+import com.google.gson.Gson;
 
 import java.util.prefs.Preferences;
 
@@ -89,40 +91,38 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,StartActivity.class);
         startActivity(i);
     }
+    public void showError(String err){
+        errorMsg.setVisibility(View.VISIBLE);
+        errorMsg.setText(err);
+    }
+
     public void loginUser (String email, String password) {
         LoginRequest r = new LoginRequest();
         r.Email = email;
         r.Password = password;
-        APIService
-                .getInstance()
-                .getAPI()
-                .login(r)
-                .enqueue(new Callback<LoginResponse>() {
-                    @Override
-                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                        LoginResponse resp = response.body();
-                        if (!resp.result) {
-                            errorMsg.setVisibility(View.VISIBLE);
-                            errorMsg.setText(resp.error);
-                        }else {
-                            //сохранить токен в памяти устройства
-                            //сохраняем токин в кэш приложения
-                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = preferences.edit();
-                            editor.putString("API_TOKEN",resp.token);
-                            editor.apply();
-                            //получение объекта из кэша
-                            //preferences.getString("API_TOKEN","default(значение по умолчанию)")
-                            showMenuActivity();
-                        }
-                    }
+        APIBuilder<LoginRequest,LoginResponse> builder = new APIBuilder<>();
+        builder.execute("login", r, new APIBuilder.onCallback<LoginResponse>() {
+            @Override
+            public void onResponse(LoginResponse resp) {
+                if (!resp.result) {
+                    showError(resp.error);
+                }else {
+                    //сохранить токен в памяти устройства
+                    //сохраняем токин в кэш приложения
+                    SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("API_TOKEN",resp.token);
+                    editor.apply();
+                    //получение объекта из кэша
+                    //preferences.getString("API_TOKEN","default(значение по умолчанию)")
+                    showMenuActivity();
+                }
+            }
 
-                    @Override
-                    public void onFailure(Call<LoginResponse> call, Throwable t) {
-                        errorMsg.setVisibility(View.VISIBLE);
-                        errorMsg.setText(t.getMessage());
-                    }
-                });
-
+            @Override
+            public void onError(Exception e) {
+                showError(e.getMessage());
+            }
+        });
     }
 }

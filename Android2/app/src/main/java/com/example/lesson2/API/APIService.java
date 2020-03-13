@@ -12,7 +12,7 @@ public class APIService {
             instance = new APIService();//инициализация instance
             //Паттерн FabricBuilder
             instance.mRetrofit = new Retrofit.Builder()
-                    .baseUrl("http://127.0.0.1:8080")
+                    .baseUrl("http://212f349f.ngrok.io")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
