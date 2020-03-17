@@ -14,16 +14,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.lesson2.API.APIBuilder;
-import com.example.lesson2.API.APIService;
 import com.example.lesson2.model.LoginRequest;
 import com.example.lesson2.model.LoginResponse;
-import com.google.gson.Gson;
 
-import java.util.prefs.Preferences;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     private TextView errorMsg;
@@ -33,6 +26,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //проверяем выполнен ли вход
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);//влазим в кэш-память
+        if(preferences.contains("API_TOKEN")){
+            showMenuActivity();
+            return;//завершаем выполнени данного метода
+        }
+
         final EditText login = findViewById(R.id.login);
         final EditText password = findViewById(R.id.password);
         Button loginBtn = findViewById(R.id.loginBtn);
@@ -71,10 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 errorMsg.setText("");
-
-
             }
-
             @Override
             public void afterTextChanged(Editable s) { }
         };
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         r.Email = email;
         r.Password = password;
         APIBuilder<LoginRequest,LoginResponse> builder = new APIBuilder<>();
-        builder.execute("login", r, new APIBuilder.onCallback<LoginResponse>() {
+        builder.execute("login", r,LoginResponse.class,new APIBuilder.onCallback<LoginResponse>() {
             @Override
             public void onResponse(LoginResponse resp) {
                 if (!resp.result) {
@@ -118,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
                     showMenuActivity();
                 }
             }
-
             @Override
             public void onError(Exception e) {
                 showError(e.getMessage());

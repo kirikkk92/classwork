@@ -10,17 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.lesson2.API.APIService;
+import com.example.lesson2.API.APIBuilder;
 import com.example.lesson2.model.ConfirmRequest;
 import com.example.lesson2.model.ConfirmResponse;
-import com.example.lesson2.model.RegistrationRequest;
-import com.example.lesson2.model.RegistrationResponse;
-import com.google.gson.Gson;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.http.GET;
 
 public class ConfirmActivity extends AppCompatActivity {
 
@@ -58,35 +51,21 @@ public class ConfirmActivity extends AppCompatActivity {
         //запрос на сервер
         ConfirmRequest r = new ConfirmRequest();
         r.code = code;
-        APIService
-                .getInstance()
-                .getAPI()
-                .confirm(r)
-                .enqueue(new Callback<ConfirmResponse>() {
-                    @Override
-                    public void onResponse(Call<ConfirmResponse> call, Response<ConfirmResponse> response) {
-                        ConfirmResponse resp = null;
-                        if (!response.isSuccessful()){
-                            Gson g = new Gson();
-                            resp = g.fromJson(response.errorBody().charStream(),ConfirmResponse.class);
-                        }else {
-                            resp = response.body();
-                        }
-
-
-                        if (!resp.result) {
-                            showError(resp.error);
-                        }else {
-                            showMenuActivity();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ConfirmResponse> call, Throwable t) {
-                        showError(t.getMessage());
-                    }
-                });
-
+        APIBuilder<ConfirmRequest,ConfirmResponse> builder = new APIBuilder<>();
+        builder.execute("confirm", r, ConfirmResponse.class, new APIBuilder.onCallback<ConfirmResponse>() {
+            @Override
+            public void onResponse(ConfirmResponse resp) {
+                if (!resp.result) {
+                    showError(resp.error);
+                }else {
+                    showMenuActivity();
+                }
+            }
+            @Override
+            public void onError(Exception e) {
+                showError(e.getMessage());
+            }
+        });
     }
     public void showMenuActivity(){
         Intent i = new Intent(this,MenuActivity.class);

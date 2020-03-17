@@ -2,6 +2,8 @@ package com.example.lesson2.API;
 
 import com.example.lesson2.model.ConfirmRequest;
 import com.example.lesson2.model.ConfirmResponse;
+import com.example.lesson2.model.JoinRequest;
+import com.example.lesson2.model.JoinResponse;
 import com.example.lesson2.model.LoginRequest;
 import com.example.lesson2.model.LoginResponse;
 import com.example.lesson2.model.RegistrationRequest;
@@ -20,4 +22,7 @@ public interface MyFamily {
 
     @POST("/submit")//создали вызов по адресу
     Call<ConfirmResponse> confirm(@Body ConfirmRequest r);
+
+    @POST("/join")//создали вызов по адресу
+    Call<JoinResponse> join(@Body JoinRequest r);
 }

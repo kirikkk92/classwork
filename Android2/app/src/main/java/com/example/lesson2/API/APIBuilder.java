@@ -1,10 +1,8 @@
 package com.example.lesson2.API;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Method;
-import java.lang.reflect.Type;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -17,7 +15,7 @@ public class APIBuilder<Req, Res> {
         void onError(Exception e);
     }
 
-    public void execute(String call,Req req, final onCallback callback) {                     // инициализирует отправку данных на сервер
+    public void execute(String call,Req req,final Class<Res> respT, final onCallback callback) {                     // инициализирует отправку данных на сервер
         MyFamily api = APIService.getInstance().getAPI();
 
         //рефлексия
@@ -32,9 +30,7 @@ public class APIBuilder<Req, Res> {
                     Res res;
                     if (!response.isSuccessful()) {
                         Gson g = new Gson();
-                        Type responseType = new TypeToken<Res>() {
-                        }.getType();
-                        res = g.fromJson(response.errorBody().charStream(), responseType);
+                        res = g.fromJson(response.errorBody().charStream(), respT);
                     } else {
                         res = response.body();
                     }
