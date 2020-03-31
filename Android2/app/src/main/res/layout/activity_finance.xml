@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE androidx.constraintlayout.widget.ConstraintLayout [<!ELEMENT androidx.constraintlayout.widget.ConstraintLayout (androidx.appcompat.widget.Toolbar|ImageButton|ListView|com.google.android.material.floatingactionbutton.FloatingActionButton|View|LinearLayout)*><!ATTLIST androidx.constraintlayout.widget.ConstraintLayoutxmlns:android CDATA #REQUIREDxmlns:app CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDtools:context CDATA #REQUIRED><!ELEMENT androidx.appcompat.widget.Toolbar (#PCDATA)><!ATTLIST androidx.appcompat.widget.Toolbarandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_marginTop CDATA #REQUIREDandroid:background CDATA #REQUIREDandroid:minHeight CDATA #REQUIREDandroid:theme CDATA #REQUIREDapp:layout_constraintBottom_toBottomOf CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIREDapp:layout_constraintHorizontal_bias CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toTopOf CDATA #REQUIREDapp:layout_constraintVertical_bias CDATA #REQUIREDapp:title CDATA #REQUIRED><!ELEMENT ImageButton (#PCDATA)><!ATTLIST ImageButtonandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:contentDescription CDATA #REQUIREDapp:layout_constraintBottom_toBottomOf CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIREDapp:layout_constraintHorizontal_bias CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toTopOf CDATA #REQUIREDapp:layout_constraintVertical_bias CDATA #REQUIREDapp:srcCompat CDATA #REQUIRED><!ELEMENT ListView (#PCDATA)><!ATTLIST ListViewandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:background CDATA #REQUIREDapp:layout_constraintBottom_toBottomOf CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIREDapp:layout_constraintHorizontal_bias CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toBottomOf CDATA #REQUIREDapp:layout_constraintVertical_bias CDATA #REQUIRED><!ELEMENT com.google.android.material.floatingactionbutton.FloatingActionButton (#PCDATA)><!ATTLIST com.google.android.material.floatingactionbutton.FloatingActionButtonandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDapp:layout_constraintBottom_toBottomOf CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIREDapp:layout_constraintHorizontal_bias CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toTopOf CDATA #REQUIREDapp:layout_constraintVertical_bias CDATA #REQUIREDapp:srcCompat CDATA #REQUIRED><!ELEMENT View (#PCDATA)><!ATTLIST Viewandroid:id CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:background CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIREDapp:layout_constraintHorizontal_bias CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toBottomOf CDATA #REQUIRED><!ELEMENT LinearLayout (TextView)*><!ATTLIST LinearLayoutandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:orientation CDATA #REQUIREDapp:layout_constraintBottom_toTopOf CDATA #REQUIREDapp:layout_constraintEnd_toEndOf CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #REQUIREDapp:layout_constraintTop_toBottomOf CDATA #REQUIRED><!ELEMENT TextView (#PCDATA)><!ATTLIST TextViewandroid:gravity CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_weight CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:text CDATA #REQUIREDapp:layout_constraintStart_toStartOf CDATA #IMPLIED>]>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinanceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="410dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="4dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="Finance" />
+
+    <ImageButton
+        android:id="@+id/calendarBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ListView
+        android:id="@+id/financesList"
+        android:layout_width="411dp"
+        android:layout_height="605dp"
+        android:background="#8A471A1A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="1.0">
+
+    </ListView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:background="#74D11414"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/financesList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Сумма"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Пользователь" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Статья" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
