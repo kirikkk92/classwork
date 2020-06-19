@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    
+
+    <head>
+    <title>Hello world2</title>
+    <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <!--Элементы формы-->
+        <input type="text" /> <!--Текстовое поле-->
+        <br />
+        <input value="Hello" placeholder="Введите никнейм">
+        <br />
+        <input type ="number" /><!--Ввод только цифровых значений-->
+        <input type="checkbox" />
+        <br>
+        <input type="date">
+        <br>
+        <input type="email">
+        <br>
+        <input type="button" value="кнопка">
+        <button>Кропка2</button>
+
+        <form action="https://www.google.com" method="POST">
+            <input name="key" /><!--Задает уникальный идентификатор элемента врамках тега  form-->
+            <select name="еда">
+                <option value="banana">Банан</option>
+                <option value="apple">Яблоко</option>
+                <option selected value="tangerine">Мандарин</option>
+            </select>
+            <input type="button" value="Очистить">
+            <input type="submit" value="Отправить"><!--sumbit-кнопка которая провоцирует отправку формы на сервер
+            будут отправленны только те значения элементов формы у торорых
+        задан не пустой атрибут name -->
+        </form>
+        <!--Таблицы в html-->
+        <table border="1">
+            <!--Заголовок-->
+            <thead>
+                <tr><!--Строка таблиы-->
+                <th>Имя</th>
+                <th>Email</th>
+                <th>Age</th>
+                </tr>
+            </thead>
+            <!--Тело таблицы-->
+            <tbody>
+                <tr>
+                    <td>Vasya</td>
+                    <td>vasya.ru</td>
+                    <td>55</td>
+                </tr>
+                <tr>
+                    <td>Olya</td>
+                    <td>olya.ru</td>
+                    <td>18</td>
+                </tr>
+                <!--Объединение строк-->
+                <tr>
+                    <td rowspan="2">Tolya</td>
+                    <td>tolya.ru</td>
+                    <td rowspan="2">44</td>
+                </tr>
+                <tr>
+                    <td>wwww.ru</td>
+                </tr>
+                <!--Объединение столбцов-->
+                <tr>
+                    <td>Jane</td>
+                    <td colspan="2">Hello</td>
+                </tr>
+            </tbody>
+            <!--Нижняя часть таблицы-->
+            <tfoot></tfoot>
+        </table>
+        <!--Мнемоники в HTML-->
+        <p>&gt;</p>
+        <p>&lt;a&gt;google.com&lt;/a&gt;</p>
+
+
+
+    </body>
+</html>    
