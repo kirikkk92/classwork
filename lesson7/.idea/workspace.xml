@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="eb8820c3-e938-4ab6-b702-0f495fdb41a0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lesson7/com/company/BankomImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson7/com/company/BankomImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lesson7/com/company/Bankomat$Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson7/com/company/Bankomat$Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lesson7/com/company/Bankomat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson7/com/company/Bankomat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lesson7/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lesson7/com/company/Main.class" afterDir="false" />
+    </list>
+=======
     <list default="true" id="eb8820c3-e938-4ab6-b702-0f495fdb41a0" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
+>>>>>>> 28d3507818df8a7c9bd4858db921c3b6b43b4f63
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +24,8 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
+<<<<<<< HEAD
+=======
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
@@ -51,6 +64,7 @@
       </file>
     </leaf>
   </component>
+>>>>>>> 28d3507818df8a7c9bd4858db921c3b6b43b4f63
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -62,15 +76,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/com/company/BankomImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Bankomat.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
@@ -79,49 +84,17 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
+  <component name="ProjectId" id="1UwSNF3gYcsll3rk54d41tqt2zz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lesson7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson7" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson7" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson7" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../homework/homework3/homework3'b" />
+>>>>>>> 28d3507818df8a7c9bd4858db921c3b6b43b4f63
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -174,6 +147,20 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
+<<<<<<< HEAD
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+=======
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
@@ -234,5 +221,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 28d3507818df8a7c9bd4858db921c3b6b43b4f63
   </component>
 </project>

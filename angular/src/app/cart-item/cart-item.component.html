@@ -1,0 +1,8 @@
+<span>{{ cartItem.name }}</span>
+<span>{{ cartItem.price }}</span>
+
+<button *ngIf="!inCart; else removeBtn" (click)="emitCartAdd()">Добавить в корзину</button>
+
+<ng-template #removeBtn>
+  <button (click)="emitCartRemove()">Удалить из корзины</button>
+</ng-template>

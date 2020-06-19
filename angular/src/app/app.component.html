@@ -1,0 +1,36 @@
+<!--<mat-checkbox>Check me!</mat-checkbox>-->
+
+<button (click)="setLang('en')">EN</button>
+<button (click)="setLang('ru')">RU</button>
+
+<div>{{ 'app_title' | translate}}</div>
+<div>{{ 'app_description' | translate}}</div>
+<div>{{'hello_user' | translate:{user: userName} | upper }}</div>
+
+<div>{{ 'hello world' | upper }}</div>
+
+<div>{{ 'ANGULAR' | lower }}</div>
+
+<div>{{ message }}</div>
+
+<div>Hello Angular</div>
+<div>{{ title }}</div>
+
+<!--<p [style.fontSize]="slider.value + 'px' ">Hello</p>-->
+
+<!--<mat-slider min="10" max="56" #slider></mat-slider>-->
+
+<test></test>
+
+<app-cart></app-cart>
+
+<div routerLinkActive="active2" routerLinkActiveConfig="{exact: true}">
+  <a routerLink="/c1">Component 1</a>
+</div>
+
+<a routerLink="/c2" routerLinkActive="active">Component 2</a>
+
+<!-- сюда буду загружаться другие компоненты -->
+<router-outlet></router-outlet>
+
+<app-weather></app-weather>

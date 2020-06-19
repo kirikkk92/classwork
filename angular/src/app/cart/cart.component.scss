@@ -1,0 +1,12 @@
+.cart,
+.items {
+  width: 400px;
+  margin: 16px;
+  border: 1px solid #000;
+
+  .item {
+    span {
+      padding: 12px;
+    }
+  }
+}

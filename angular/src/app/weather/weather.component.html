@@ -1,0 +1,14 @@
+<input placeholder="City name" #cityName />
+<button (click)="searchCity(cityName.value)">Search</button>
+
+<div *ngIf="city == null; else weather">Not found :(</div>
+
+<ng-template #weather>
+  <div class="container">
+    <img [src]="'https://www.metaweather.com/static/img/weather/png/64/' + cityWeather.weather_state_abbr +  '.png'" />
+
+    <div>Текущая температура: {{ cityWeather.the_temp }}</div>
+    <div>Максимальная температура: {{ cityWeather.max_temp }}</div>
+    <div>Минимальная температура: {{ cityWeather.min_temp }}</div>
+  </div>
+</ng-template>

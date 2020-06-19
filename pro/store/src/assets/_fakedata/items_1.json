@@ -1,0 +1,23 @@
+[
+    {
+        "id":"1",
+        "price": 121,
+        "name": "item name",
+        "images":[
+            "",
+            "",
+            ""
+        ],
+        "productOwner":"Addidas",
+        "quantity": 12,
+        "description":"Some text",
+        "peoperties":{
+            "Цвет": "Желтый, зеленый",
+            "Вес": "1000кг"
+        }
+
+    },
+    {
+        "id": "2"
+    }
+]

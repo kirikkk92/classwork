@@ -1,0 +1,5 @@
+{
+    "app_title": "Hello world",
+    "app_description": "My first Angular application",
+    "hello_user": "Hello,{{user}}"
+}

@@ -2,9 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d660bb60-07e0-470f-9ff7-332d48553ebb" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/../lesson8/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/lesson8.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/out/production/lesson8/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/out/production/lesson8/com/company/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/out/production/lesson8/com/company/UserFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/src/com/company/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson8/src/com/company/UserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson9.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lesson9/com/company/Game.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lesson9/com/company/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/lesson9/com/company/MyException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/MyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson7/.idea/workspace.xml" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/src/com/company/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Game.java" afterDir="false" />
+>>>>>>> f2fd907cce33d1c1c6ff04419869a82b57eed4f0
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +46,8 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
+<<<<<<< HEAD
+=======
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
@@ -56,6 +89,7 @@
       </file>
     </leaf>
   </component>
+>>>>>>> f2fd907cce33d1c1c6ff04419869a82b57eed4f0
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -72,15 +106,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/com/company/MyException.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Game.java" />
-      </list>
-    </option>
-  </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
@@ -89,45 +114,12 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
+  <component name="ProjectId" id="1VHui38rjVOvRnTDpk17IUxgda2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lesson9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson9" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson9" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lesson9" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lesson9" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -174,6 +166,20 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+=======
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
@@ -263,5 +269,6 @@
         </state>
       </provider>
     </entry>
+>>>>>>> f2fd907cce33d1c1c6ff04419869a82b57eed4f0
   </component>
 </project>

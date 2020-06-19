@@ -1,0 +1,19 @@
+<div class="items">
+
+  <h1>Товары</h1>
+
+  <div *ngFor="let item of items" class="item">
+    <app-cart-item [item]="item" (cartAdd)="addToCart(item)"></app-cart-item>
+  </div>
+
+</div>
+
+<div class="cart">
+
+  <h1>Корзина</h1>
+
+  <div *ngFor="let item of cart" class="item">
+    <app-cart-item [item]="item" [inCart]="true" (cartRemove)="removeFromCart(item)"></app-cart-item>
+  </div>
+
+</div>
