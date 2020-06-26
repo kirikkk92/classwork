@@ -13,13 +13,22 @@ import {MatListModule} from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { RequestService } from './services/request.service';
 import { FakeRequestService } from './services/fake.service';
+import { ItemCardComponent } from './item-card/item-card.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import { ToolBarService } from './services/toolbar.service';
+import {MatRippleModule} from '@angular/material/core';
+import { AdminModule } from './admin/admin.module';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     StoreComponent,
-    MenuComponent
+    MenuComponent,
+    ItemCardComponent
   ],
   imports: [
     BrowserModule,
@@ -29,11 +38,16 @@ import { FakeRequestService } from './services/fake.service';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    MatRippleModule,
+    AdminModule
   ],
   providers: [
     RequestService,
-    FakeRequestService
+    FakeRequestService,
+    ToolBarService
   ],
   bootstrap: [AppComponent]
 })

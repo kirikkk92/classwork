@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>{{item.name}}</mat-card-title>
+      <mat-card-subtitle>Цена: {{item.price}} $</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="item.images.length == 0 ? './assets/no-photo.png' : item.images[0]">
+    <mat-card-content>
+      <p>
+        {{item.description }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Подробнее</button>
+      <button color = "primary" mat-button [disabled]="item.quantity == 0">В корзину</button>
+    </mat-card-actions>
+
+    <p class="quantity">В наличии: {{item.quantity}}</p>
+  </mat-card>

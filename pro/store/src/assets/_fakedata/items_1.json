@@ -4,12 +4,9 @@
         "price": 121,
         "name": "item name",
         "images":[
-            "",
-            "",
-            ""
-        ],
+],
         "productOwner":"Addidas",
-        "quantity": 12,
+        "quantity": 0,
         "description":"Some text",
         "peoperties":{
             "Цвет": "Желтый, зеленый",
@@ -18,6 +15,20 @@
 
     },
     {
-        "id": "2"
+        "id": "2",
+        "price": 121555,
+        "name": "item names",
+        "images":[
+            "",
+            "",
+            ""
+        ],
+        "productOwner":"Nike",
+        "quantity": 7,
+        "description":"Some text",
+        "peoperties":{
+            "Цвет": "Желтый, зеленый,синий",
+            "Вес": "5000кг"
+        }
     }
 ]

@@ -1,0 +1,37 @@
+[
+    {
+        "id":"1",
+        "price": 10,
+        "name": " name",
+        "images":[
+            "",
+            "",
+            ""
+        ],
+        "productOwner":"puma",
+        "quantity": 12,
+        "description":" text",
+        "peoperties":{
+            "Цвет": "красный, зеленый",
+            "Вес": "100000кг"
+        }
+
+    },
+    {
+        "id": "2",
+        "price": 1000,
+        "name": " name",
+        "images":[
+            "",
+            "",
+            ""
+        ],
+        "productOwner":"puma",
+        "quantity": 12,
+        "description":" text",
+        "peoperties":{
+            "Цвет": "красный, зеленый",
+            "Вес": "100000кг"
+        }
+    }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id":"1",
+        "price": 21,
+        "name": "item",
+        "images":[
+            "",
+            "",
+            ""
+        ],
+        "productOwner":"Nike",
+        "quantity": 12,
+        "description":"Some",
+        "peoperties":{
+            "Цвет": "Желтый, ",
+            "Вес": "1кг"
+        }
+
+    },
+    {
+        "id": "2"
+    }
+]

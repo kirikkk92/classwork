@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FakeRequestService } from '../services/fake.service';
+import { ToolBarService } from '../services/toolbar.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,29 +8,27 @@ import { FakeRequestService } from '../services/fake.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  categories = [
-    {
-      id: "1",
-      name: "CPU"
-    },
-    {
-      id: "2",
-      name: "GPU"
-    },
-    {
-      id: "3",
-      name: "Keyboards"
-    }
-  ];
+  categories = [];
+  items = [];
+  isMenuOpened = true;
 
   showItems(event){
-    console.log(event.option.value);
+    this.requestService.getItems(event.option.value).toPromise().then(
+      (data: any )=>{
+        this.items = data;
+      }
+    )
   }
 
-  constructor(private requestService: FakeRequestService) { 
+  constructor(private requestService: FakeRequestService, private toolbarService:ToolBarService) { 
+
+    this.toolbarService.onMenuButtonClick.subscribe(()=>{
+      this.isMenuOpened = !this.isMenuOpened;
+    });
+    
     this.requestService.getCategories().toPromise().then(
-      (data)=> {
-        console.log(data);
+      (data: any )=> {
+        this.categories = data;
       },
       (err)=> {
         console.log(err);
