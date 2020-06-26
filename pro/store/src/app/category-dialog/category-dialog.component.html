@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Редактирование категорий</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Название категории</mat-label>
+        <input matInput type="text" [value]="data.category" #category>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()">Отмена</button>
+    <button mat-button [mat-dialog-close]="category.value" cdkFocusInitial>Готово</button>
+  </div>

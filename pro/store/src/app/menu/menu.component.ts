@@ -26,7 +26,7 @@ export class MenuComponent implements OnInit {
       this.isMenuOpened = !this.isMenuOpened;
     });
     
-    this.requestService.getCategories().toPromise().then(
+    this.requestService.getCategories().then(
       (data: any )=> {
         this.categories = data;
       },

@@ -3,3 +3,10 @@
 html, body { height: 100%;margin: 0px;padding: 0px; }
 body { font-family: Roboto, "Helvetica Neue", sans-serif; }
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.mat-tab-body-content {
+    overflow: hidden !important;
+    padding: 16px !important;
+    height: fit-content;
+    box-sizing: border-box;
+}

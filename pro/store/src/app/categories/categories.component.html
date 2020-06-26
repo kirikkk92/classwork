@@ -1,0 +1,14 @@
+<mat-chip-list>
+    <mat-chip [selectable]="true" (click)="add()">
+        Добавит категорию
+    </mat-chip>
+    
+    <mat-chip *ngFor="let category of categories"
+      [selectable]="true"
+      [removable]="true"
+      (click)="edit(category)"
+      (removed)="remove(category)">
+      {{category.name}}
+      <mat-icon matChipRemove >cancel</mat-icon>
+    </mat-chip>
+</mat-chip-list>
