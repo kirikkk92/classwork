@@ -1,0 +1,22 @@
+<button mat-raised-button color="accent" (click) ="onItemAdd()">Добавить товар</button>
+
+<button mat-button [matMenuTriggerFor]="menu">
+    {{ selectedCategory == null ? 'Выбор категории' : selectedCategory.name}}
+</button>
+
+<mat-menu #menu>
+  <button *ngFor = "let category of categories"
+    mat-menu-item
+    (click)="getItems(category)">
+    {{ category.name }}
+</button>
+</mat-menu>
+
+<div>
+  <app-item-short-card 
+  *ngFor = "let item of items"
+  [item]="item"
+  (onRemove) ="onItemRemove(item)"
+  (onEdit)="onItemEdit(item)">
+  </app-item-short-card>
+</div>

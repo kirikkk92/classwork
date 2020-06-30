@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   isMenuOpened = true;
 
   showItems(event){
-    this.requestService.getItems(event.option.value).toPromise().then(
+    this.requestService.getItems(event.option.value).then(
       (data: any )=>{
         this.items = data;
       }

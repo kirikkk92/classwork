@@ -13,11 +13,24 @@ export class FakeRequestService {
                 categories = JSON.parse(categoriesJSON);
             }
             accept(categories);
-        } ); 
+        }); 
     }
 
     getItems(catID) {
-        return this.http.get("http://localhost:4200/assets/_fakedata/items_" + catID + ".json");
+        return new Promise((accept)=> {
+            let itemsJSON = localStorage.getItem("ITEMS");
+            let items = [];
+            if (itemsJSON != null) {
+                items = JSON.parse(itemsJSON);
+            }
+            let filtetedItems = [];
+            for (let item of items) {
+                if (item.categoryID == catID) {
+                    filtetedItems.push(item);
+                }
+            }
+            accept(filtetedItems);
+        });
     }
 
     addNewCategory(category) {
