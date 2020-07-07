@@ -28,22 +28,38 @@ export class ItemsComponent implements OnInit {
     this.requestService.getItems(category.id).then(
       (data:any)=>{
         this.items = data;
+        this.selectedCategory = category;
       }
     );
    }
 
    onItemRemove(item) {
-    
+      this.requestService.removeItem(item.id).then(
+        () => {
+          let index = this.items.indexOf(item);
+          this.items.splice(index, 1);
+        }
+      )
    };
 
-   onItemEdit(ite) {
-
+   onItemEdit(item) {
+    this.dialog.open(ItemDialogComponent, {
+      data: {
+        item: {...item},
+        categories:this.categories
+      },
+    }).afterClosed().subscribe((result)=>{
+      let index = this.items.indexOf(item);
+      this.editItem(result,index);
+    });
    };
 
    onItemAdd() {
      this.dialog.open(ItemDialogComponent, {
        data: {
-         item: {},
+         item: {
+           images:[]
+         },
          categories:this.categories
        },
      }).afterClosed().subscribe((result)=>{
@@ -51,10 +67,36 @@ export class ItemsComponent implements OnInit {
      });
    };
 
-   addNewItem(item) {
-
+  addNewItem(item) {
+    if (item == undefined) {
+      return;
+    }
+    this.requestService.addItem(item).then(
+      (newItem:any) => {
+        if (this.selectedCategory == null) {
+          return;
+        }
+        if (newItem.categoryId == this.selectedCategory.id) {
+          this.items.push(newItem);
+        }
+      }
+    );
    }
 
+   editItem(item, index) {
+     if (item == undefined) {
+       return;
+     }
+     this.requestService.editItem(item).then(
+       () => {
+         if (this.selectedCategory.id == item.categoryId) {
+           this.items[index] = item;
+         } else {
+           this.items.splice(index, 1)
+         }
+       }
+     )
+   }
 
   ngOnInit(): void {
   }

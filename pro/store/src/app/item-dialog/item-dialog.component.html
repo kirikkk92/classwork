@@ -35,8 +35,24 @@
         </mat-option>
           </mat-select>
     </mat-form-field>
+    <h4>Изображение товара</h4>
+    <mat-form-field>
+        <mat-label>URL изображения</mat-label>
+        <input matInput #img />
+        <button mat-icon-button matSuffix (click)="data.item.images.push(img.value); img.value = '' ">
+            <mat-icon>add</mat-icon>
+        </button>
+    </mat-form-field>
 
+    <div class = "img-container">
+        <img (dblclick)="removeImg(image)"
+        *ngFor = "let image of data.item.images"
+        [src]="image"
+        width="240"
+        height="180">
+    </div>
 </div>
+
 <div mat-dialog-actions>
     <button mat-button (click)="closeDialog()">Отмена</button>
     <button mat-button [mat-dialog-close]="data.item" cdkFocusInitial>Готово</button>

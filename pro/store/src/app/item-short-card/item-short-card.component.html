@@ -6,7 +6,7 @@
     <img mat-card-image [src]="item.images.length == 0 ? './assets/no-photo.png' : item.images[0]">
     
     <mat-card-actions>
-      <button mat-button (click) = "removeItem">Удалить</button>
-      <button color = "primary" mat-button (click) = "editItem">Редактировать</button>
+      <button mat-button (click) = "removeItem()">Удалить</button>
+      <button color = "primary" mat-button (click) = "editItem()">Редактировать</button>
     </mat-card-actions>
   </mat-card>

@@ -25,7 +25,7 @@ export class FakeRequestService {
             }
             let filtetedItems = [];
             for (let item of items) {
-                if (item.categoryID == catID) {
+                if (item.categoryId == catID) {
                     filtetedItems.push(item);
                 }
             }
@@ -85,6 +85,56 @@ export class FakeRequestService {
             }
             categoriesJSON = JSON.stringify(categories);
             localStorage.setItem("CATEGORIES",categoriesJSON);
+            accept();
+        });
+    }
+
+    addItem(item) {
+        return new Promise((accept) =>{
+            let itemsJSON = localStorage.getItem("ITEMS");
+            let items = [];
+            if(itemsJSON != null) {
+                items = JSON.parse(itemsJSON);
+            }
+            item.id = (new Date()).getTime();
+            items.push(item);
+            localStorage.setItem("ITEMS",JSON.stringify(items));
+            accept(item);
+        });
+    }
+    
+    editItem(item) {
+        return new Promise((accept) =>{
+            let itemsJSON = localStorage.getItem("ITEMS");
+            let items = [];
+            if(itemsJSON != null) {
+                items = JSON.parse(itemsJSON);
+            }
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].id == item.id) {
+                    items[i] = item;
+                    break;
+                }
+            }
+            localStorage.setItem("ITEMS",JSON.stringify(items));
+            accept();
+        });
+    }
+
+    removeItem(itemID) {
+        return new Promise((accept) =>{
+            let itemsJSON = localStorage.getItem("ITEMS");
+            let items = [];
+            if(itemsJSON != null) {
+                items = JSON.parse(itemsJSON);
+            }
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].id == itemID) {
+                    items.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem("ITEMS",JSON.stringify(items));
             accept();
         });
     }

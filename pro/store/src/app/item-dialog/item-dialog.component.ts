@@ -10,11 +10,15 @@ export class ItemDialogComponent implements OnInit {
 
   constructor(
     private dialogRef: MatDialogRef<ItemDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-    @Inject(MAT_DIALOG_DATA) public categories: any) { }
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
 
     closeDialog() {
       this.dialogRef.close();
+    }
+
+    removeImg(img) {
+      let index = this.data.item.images.indexOf(img);
+      this.data.item.images.splice(index, 1);
     }
 
   ngOnInit(): void {
