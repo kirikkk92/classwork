@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -57,7 +58,8 @@ public class Main {
         au6.setBooks(Arrays.asList(b6));
         au7.setBooks(Arrays.asList(b7));
 
-
-
+        Arrays.stream(books)
+                .filter((s)->s.getNumberOfPages() >200)
+                .forEach(System.out.println (s));
     }
 }
