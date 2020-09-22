@@ -12,6 +12,8 @@
     </div>
     <form action="page2.jsp">
         <h1><input name = "name" type="text" placeholder="Enter your name"></h1>
+        <input type = "checkbox"> I agree with the terms of service
+        <br>
         <input type ="submit" value = "Enter">
     </form>
 
