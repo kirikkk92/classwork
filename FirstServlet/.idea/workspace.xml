@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1a88bd6-a942-4b8b-b9fb-3b9d51661f92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../My we bapp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../My we bapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../My we bapp/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/src/main/webapp/page2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../My we bapp/src/main/webapp/page2.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/target/classes/HelloServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../My we bapp/target/classes/HelloServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/target/tomcat/logs/access_log.2020-09-15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/index_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/page2_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../My we bapp/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/page2_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../My we bapp/target/tomcat/logs/access_log.2020-09-22" beforeDir="false" afterPath="$PROJECT_DIR$/../My we bapp/target/tomcat/logs/access_log.2020-09-22" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
