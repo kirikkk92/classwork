@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lesson4</title>
+    <link rel="stylesheet" href="CSS2.css">
+</head>
+<body>
+    <div style="color: purple;">Hello</div>
+    <div id="world">World</div>
+    <div id="normal">Нормальный поток</div>
+    <div id="relative">Relative</div>
+    <p>Я рисуюсь в нормальном потоке</p>
+    <div id="fixed">fixed</div>
+    <div id="absolute">Absolute</div>
+    <div id="absolute2">Absolute2</div>
+
+    <!-- поведение блока absolute относительно родительского блока relative -->
+  <div style="position: relative; padding: 300px; background: blue;">
+    <div style="position: absolute; padding: 20px; background: red; top: 20px; left: 30px;">
+
+    </div>
+  </div>
+</body>
+</html>

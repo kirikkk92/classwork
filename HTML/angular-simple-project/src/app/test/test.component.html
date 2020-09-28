@@ -1,0 +1,33 @@
+<p>{{ value }}</p>
+
+<!--
+  [] - берутся атрибуты, которые меняются на стороне компонента (ts)
+  () - берутся атрибуты, изменение которых инициирует пользователь
+  [(ngModel)] - двусторонее связывание
+-->
+
+<a id="link" [href]="url">Hello</a>
+<button (click)="addValue()">Press me!</button>
+<p>{{ count }}</p>
+
+<!-- #inputName - ссылка на объект input -->
+<input [(ngModel)]="name" #inputName />
+<p>{{ name }}</p>
+<p>{{ inputName.value }}</p>
+
+<!-- директива ngIf -->
+<div *ngIf="value % 3 == 0; else java">Angular</div>
+<ng-template #java>Java</ng-template>
+
+<!-- директива ngSwitch -->
+<div [ngSwitch]="inputName.value">
+  <button *ngSwitchCase="'button'">Hello</button>
+  <input *ngSwitchCase="'input'" />
+  <a href="#" *ngSwitchCase="'a'">Link</a>
+</div>
+
+<!-- директива ngFor -->
+<div *ngFor="let user of users">
+  <p>{{ user.name }}</p>
+  <p>{{ user.email }}</p>
+</div>
