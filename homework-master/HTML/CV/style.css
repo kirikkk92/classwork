@@ -1,0 +1,29 @@
+header {
+    background: url(https://million-wallpapers.ru/wallpapers/2/64/335185475206375/oblako-gaza.jpg);
+
+}
+img {
+    
+    height: 185px;
+    border-radius: 50%;
+    float: left;
+}
+#name{
+    font-family: 'Balsamiq Sans', cursive;
+
+    color: aliceblue;
+    font-size: 80px;
+    text-align: center;
+    margin: 0px;
+    
+}
+.table{
+    width: 100%;
+}
+
+.first {
+    background: rgb(34, 108, 131);
+}
+.second {
+    background: cornflowerblue;
+}
